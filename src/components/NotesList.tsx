@@ -21,7 +21,9 @@ function NotesList(props: Props){
                                 id={note.id}
                                 title={note.title}
                                 categories={note.categories}
-                                content={note.content} />
+                                content={note.content}
+                                name={note.name}
+                                date={note.date} />
                             </Col>
                     )}
                 </Row>
