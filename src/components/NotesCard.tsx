@@ -21,6 +21,12 @@ function NotesCard(props: Props) {
         <Card.Subtitle className="mb-2 text-muted">{
           categories
         }</Card.Subtitle>
+        <Card.Subtitle className="mb-2 text-muted">
+          {props.name}
+        </Card.Subtitle >
+        <Card.Subtitle className="mb-2 text-muted">
+          {props.date}
+        </Card.Subtitle>        
         <Button variant="outline-success" size="sm">Bearbeiten</Button>{' '}
         <Button variant="outline-danger" size="sm">Löschen</Button>{' '}
       </Card.Body>
