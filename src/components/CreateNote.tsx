@@ -12,14 +12,18 @@ function CreateNote(props: Props) {
     const titleRef = useRef<HTMLInputElement>(null);
     const contentRef = useRef<HTMLTextAreaElement>(null);
     const categoriesRef = useRef<HTMLInputElement>(null);
+    const nameRef = useRef<HTMLInputElement>(null);
+    const dateRef = useRef<HTMLInputElement>(null);
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
         const title = titleRef.current!.value;
         const content = contentRef.current!.value;
         const categoriesInput = categoriesRef.current!.value;
+        const name = nameRef.current!.value;
+        const date = dateRef.current!.value;
 
-        if (!title || !content || !categoriesInput) return
+        if (!title || !content || !categoriesInput || !name || !date) return
 
         const id = props.notes.length + 1;
         const categories = categoriesInput.split(',').map(category => category.trim())
@@ -28,7 +32,9 @@ function CreateNote(props: Props) {
             title,
             content,
             categories,
-            id
+            id,
+            name,
+            date
         });
 
     };
@@ -50,6 +56,14 @@ function CreateNote(props: Props) {
                         <Form.Label>Kategorien</Form.Label>
                         <Form.Control type="text" placeholder="Gebe die Kategorien ein" ref={categoriesRef} />
                     </Form.Group>
+                    <Form.Group className="mb-3">
+                        <Form.Label>Name</Form.Label>
+                        <Form.Control type="text" placeholder="Gib deinen Namen ein" ref={nameRef} />
+                    </Form.Group>
+                    <Form.Group className="mb-3">
+                            <Form.Label>Datum</Form.Label>
+                            <Form.Control type="date" placeholder="Gebe das aktuelle Datum an" ref={dateRef} />
+            </Form.Group>
                     <Button variant="outline-primary" type="submit">Notiz erstellen</Button>
                 </Form>
              </Card.Body>
