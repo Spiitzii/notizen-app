@@ -7,6 +7,7 @@ import { notesData } from './data/notes.data';
 import { Note } from './types/notes.type';
 import { useEffect, useState } from 'react';
 import { useGetNotes } from './hooks/api';
+import React from 'react';
 
 
 export default function App() {
