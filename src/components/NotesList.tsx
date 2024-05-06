@@ -3,6 +3,7 @@ import { Note } from "../types/notes.type";
 import { Col, Container, Row } from "react-bootstrap";
 import { useEffect, useState } from "react";
 import { BASE_URL } from "../config";
+import React from "react";
 
 type Props = {
     notes: Note[],

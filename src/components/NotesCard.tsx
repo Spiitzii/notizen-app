@@ -1,6 +1,7 @@
 import Card from "react-bootstrap/Card";
 import { Note } from "../types/notes.type";
 import { Button } from "react-bootstrap";
+import React from "react";
 
 
 type Props = Note & {

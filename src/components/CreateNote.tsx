@@ -2,6 +2,7 @@ import { useRef } from "react";
 import { Button, Card, Form } from "react-bootstrap";
 import { Note } from "../types/notes.type";
 import { BASE_URL } from "../config";
+import React from "react";
 
 type Props = {
     notes: Note[],

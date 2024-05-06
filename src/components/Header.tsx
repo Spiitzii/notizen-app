@@ -1,3 +1,4 @@
+import React from 'react';
 import { Button, Container, Form, Navbar } from 'react-bootstrap';
 
 type Props = {
