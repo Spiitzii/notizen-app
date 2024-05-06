@@ -46,14 +46,6 @@ function NotesList(props: Props){
                         filteredNotes.map(note => 
                             <Col md={6} key={note.id}>
                                 <NotesCard
-<<<<<<< HEAD
-                                id={note.id}
-                                title={note.title}
-                                categories={note.categories}
-                                content={note.content}
-                                name={note.name}
-                                date={note.date} />
-=======
                                     id={note.id}
                                     title={note.title}
                                     categories={note.categories}
@@ -61,7 +53,6 @@ function NotesList(props: Props){
                                     user={note.user}
                                     date={note.date} 
                                     deleteFunction={deleteNote} />
->>>>>>> e2aa33168a6a117fcdd8eca14342a902654ac966
                             </Col>
                     )}
                 </Row>

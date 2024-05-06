@@ -13,41 +13,19 @@ function CreateNote(props: Props) {
     const titleRef = useRef<HTMLInputElement>(null);
     const contentRef = useRef<HTMLTextAreaElement>(null);
     const categoriesRef = useRef<HTMLInputElement>(null);
-<<<<<<< HEAD
-    const nameRef = useRef<HTMLInputElement>(null);
-    const dateRef = useRef<HTMLInputElement>(null);
-=======
     const userRef = useRef<HTMLInputElement>(null);
->>>>>>> e2aa33168a6a117fcdd8eca14342a902654ac966
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
         const title = titleRef.current!.value;
         const content = contentRef.current!.value;
         const categoriesInput = categoriesRef.current!.value;
-<<<<<<< HEAD
-        const name = nameRef.current!.value;
-        const date = dateRef.current!.value;
-
-        if (!title || !content || !categoriesInput || !name || !date) return
-=======
         const user = userRef.current!.value;
 
         if (!title || !content || !categoriesInput || !user) return
->>>>>>> e2aa33168a6a117fcdd8eca14342a902654ac966
 
         const categories = categoriesInput.split(',').map(category => category.trim())
 
-<<<<<<< HEAD
-        props.addNote({
-            title,
-            content,
-            categories,
-            id,
-            name,
-            date
-        });
-=======
         fetch(`${BASE_URL}/notes`, {
             method: 'POST',
             headers: {
@@ -58,7 +36,6 @@ function CreateNote(props: Props) {
         })
 
         window.location.reload()
->>>>>>> e2aa33168a6a117fcdd8eca14342a902654ac966
 
     };
 
@@ -80,19 +57,9 @@ function CreateNote(props: Props) {
                         <Form.Control type="text" placeholder="Gebe die Kategorien ein" ref={categoriesRef} />
                     </Form.Group>
                     <Form.Group className="mb-3">
-<<<<<<< HEAD
-                        <Form.Label>Name</Form.Label>
-                        <Form.Control type="text" placeholder="Gib deinen Namen ein" ref={nameRef} />
-                    </Form.Group>
-                    <Form.Group className="mb-3">
-                            <Form.Label>Datum</Form.Label>
-                            <Form.Control type="date" placeholder="Gebe das aktuelle Datum an" ref={dateRef} />
-            </Form.Group>
-=======
                         <Form.Label>Benutzer</Form.Label>
                         <Form.Control type="text" placeholder="Gebe den Benutzernamen ein" ref={userRef} />
                     </Form.Group>
->>>>>>> e2aa33168a6a117fcdd8eca14342a902654ac966
                     <Button variant="outline-primary" type="submit">Notiz erstellen</Button>
                 </Form>
              </Card.Body>

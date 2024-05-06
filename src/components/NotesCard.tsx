@@ -16,22 +16,6 @@ function NotesCard(props: Props) {
     <Card className='mb-1'>
       <Card.Body>
         <Card.Title>{props.title}</Card.Title>
-<<<<<<< HEAD
-        <Card.Text>
-          {props.content}
-        </Card.Text>
-        <Card.Subtitle className="mb-2 text-muted">{
-          categories
-        }</Card.Subtitle>
-        <Card.Subtitle className="mb-2 text-muted">
-          {props.name}
-        </Card.Subtitle >
-        <Card.Subtitle className="mb-2 text-muted">
-          {props.date}
-        </Card.Subtitle>        
-        <Button variant="outline-success" size="sm">Bearbeiten</Button>{' '}
-        <Button variant="outline-danger" size="sm">Löschen</Button>{' '}
-=======
         <Card.Subtitle className="mb-2 text-muted">{props.user}</Card.Subtitle>
         <Card.Subtitle className="mb-2 text-muted">{date}</Card.Subtitle>
         <Card.Text>{props.content}</Card.Text>
@@ -43,7 +27,6 @@ function NotesCard(props: Props) {
           size="sm" 
           onClick={()=>{ props.deleteFunction(props.id) }}
         >Löschen</Button>
->>>>>>> e2aa33168a6a117fcdd8eca14342a902654ac966
       </Card.Body>
     </Card>
   )
